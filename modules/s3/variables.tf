@@ -7,3 +7,7 @@ variable "smresume_cf_arn" {
   description = "ARN of the smresume CF Distribution"
   type        = string
 }
+
+variable "smresume_s3_arn" {
+  description = "ARN of the S3 Bucket for website content"
+}

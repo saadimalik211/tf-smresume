@@ -12,7 +12,7 @@ resource "aws_s3_bucket_policy" "tfer--smresume-s3bucketpolicy" {
           Service = "cloudfront.amazonaws.com"
         }
         Action   = "s3:GetObject"
-        Resource = "${var.s3_bucket_name}/*"
+        Resource = "${var.smresume_s3_arn}/*"
         Condition = {
           StringEquals = {
             "AWS:SourceArn" = var.smresume_cf_arn
