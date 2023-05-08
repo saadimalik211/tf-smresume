@@ -24,7 +24,7 @@ resource "aws_cloudfront_distribution" "tfer--smresume-cf" {
     connection_attempts      = "3"
     connection_timeout       = "10"
     domain_name              = format("%s.s3.us-east-1.amazonaws.com", var.s3_bucket_name)
-    origin_access_control_id = aws_cloudfront_origin_access_control.tfer--smresume-oac.id
+    origin_access_control_id = var.smresume_oac_id
     origin_id                = format("%s.s3-website-us-east-1.amazonaws.com", var.s3_bucket_name)
   }
 

@@ -7,10 +7,6 @@ variable "cf_oac_name" {
   description = "OAC name for the main website CF Distribution"
 }
 
-variable "cf_origin_access_control_id" {
-  description = "CF Origin Access Control ID for CF Distribution"
-}
-
 variable "acm_ssl_arn" {
   description = "ARN for SSL certificated that must be preconfigured in AWS"
 }
@@ -21,4 +17,8 @@ variable "subdomain" {
 
 variable "domain" {
   description = "Domain for deployment"
+}
+
+variable "smresume_oac_id" {
+  description = "Origin Access Control ID for Cloudfront Distribution serving website."
 }
