@@ -11,10 +11,6 @@ variable "smresume_oac_id" {
   description = "Origin Access Control ID for CF Distribution"
 }
 
-variable "acm_ssl_arn" {
-  description = "ARN for SSL certificated that must be preconfigured in AWS"
-}
-
 variable "subdomain" {
   description = "Subdomain for deployment"
 }
@@ -22,3 +18,10 @@ variable "subdomain" {
 variable "domain" {
   description = "Domain for deployment"
 }
+
+#Hosted zone ID from Route53
+variable "hosted_zone_id" {
+  description = "The ID of the hosted zone that will be used by ACM for domain validation"
+  type        = string
+}
+
